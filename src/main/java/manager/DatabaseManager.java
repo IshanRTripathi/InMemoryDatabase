@@ -11,7 +11,7 @@ public class DatabaseManager {
         if (databaseHashMap.containsKey(databaseName)) {
             System.out.println("A database already exists with this name");
         } else {
-            databaseHashMap.put(databaseName, Database.builder().name(databaseName).build());
+            databaseHashMap.put(databaseName, new Database(databaseName, null, null));
         }
         return databaseHashMap.get(databaseName);
     }
